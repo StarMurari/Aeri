@@ -43,7 +43,7 @@ body {
 }
 
 .animate-blob {
-  animation: blob 7s infinite;
+  animation: blob 8s infinite;
 }
 
 .animation-delay-2000 {
@@ -53,4 +53,3 @@ body {
 .animation-delay-4000 {
   animation-delay: 4s;
 }
-

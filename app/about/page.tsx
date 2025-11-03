@@ -48,7 +48,7 @@ export default function About() {
               <p className="text-gray-600 dark:text-gray-400 mb-6">
                 Aeri provides a modern foundation for web applications, offering 
                 excellent performance, beautiful design, and developer-friendly 
-                architecture. Whether you're building a startup MVP or a large-scale 
+                architecture. Whether you&apos;re building a startup MVP or a large-scale 
                 application, Aeri has you covered.
               </p>
             </div>

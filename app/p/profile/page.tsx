@@ -17,6 +17,15 @@ export default function ProfilePage() {
 
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
+  // Calculate circle dash values
+  const smallCircleRadius = 28;
+  const smallCircleCircumference = String(2 * Math.PI * smallCircleRadius);
+  const smallCircleDashoffset = String((2 * Math.PI * smallCircleRadius) * 0.02);
+  
+  const largeCircleRadius = 36;
+  const largeCircleCircumference = String(2 * Math.PI * largeCircleRadius);
+  const largeCircleDashoffset = String((2 * Math.PI * largeCircleRadius) * 0.02);
+
   return (
     <div className="flex h-screen bg-white">
       <ChatSidebar
@@ -38,7 +47,8 @@ export default function ProfilePage() {
             </svg>
           </button>
           <h1 className="text-lg font-semibold text-gray-900">Profile</h1>
-          <div className="w-10" /> {/* Spacer for centering */}
+          {/* Spacer for centering */}
+          <div className="w-10" />
         </div>
         
         {/* Main Content */}
@@ -130,8 +140,8 @@ export default function ProfilePage() {
                     stroke="#9333ea"
                     strokeWidth="5"
                     fill="none"
-                    strokeDasharray={`${2 * Math.PI * 28}`}
-                    strokeDashoffset={`${2 * Math.PI * 28 * 0.02}`}
+                    strokeDasharray={smallCircleCircumference}
+                    strokeDashoffset={smallCircleDashoffset}
                     strokeLinecap="round"
                     className="sm:hidden"
                   />
@@ -151,8 +161,8 @@ export default function ProfilePage() {
                     stroke="#9333ea"
                     strokeWidth="6"
                     fill="none"
-                    strokeDasharray={`${2 * Math.PI * 36}`}
-                    strokeDashoffset={`${2 * Math.PI * 36 * 0.02}`}
+                    strokeDasharray={largeCircleCircumference}
+                    strokeDashoffset={largeCircleDashoffset}
                     strokeLinecap="round"
                     className="hidden sm:block"
                   />
@@ -176,6 +186,7 @@ export default function ProfilePage() {
             </div>
           </div>
         </div>
+      </div>
       </div>
     </div>
   );
